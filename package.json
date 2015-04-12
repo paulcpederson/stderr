@@ -1,0 +1,36 @@
+{
+  "name": "errify",
+  "description": "Flash an OS notification when a process writes to stderr",
+  "version": "1.0.0",
+  "author": "Paul C Pederson <paul.c.pederson@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/paulcpederson/errify/issues"
+  },
+  "homepage": "https://github.com/paulcpederson/errify",
+  "keywords": [
+    "alert",
+    "error",
+    "notification",
+    "stderr"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulcpederson/errify.git"
+  },
+  "bin": {
+    "errify": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "standard && faucet"
+  },
+  "dependencies": {
+    "node-notifier": "^4.1.2"
+  },
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "standard": "^3.3.2",
+    "tape": "^4.0.0"
+  }
+}
