@@ -3,12 +3,9 @@
 [![npm][npm-image]][npm-url]
 [![travis][travis-image]][travis-url]
 
-[npm-image]: https://img.shields.io/npm/v/stderr.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/stderr
-[travis-image]: https://img.shields.io/travis/paulcpederson/stderr.svg?style=flat-square
-[travis-url]: https://travis-ci.org/paulcpederson/stderr
-
 > Flash an OS notification when a process writes to `stderr`
+
+![Demo](preview.gif)
 
 ## Install
 
@@ -56,3 +53,8 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md) for contribution guidelines.
 ## License
 
 [ISC](LICENSE.md)
+
+[npm-image]: https://img.shields.io/npm/v/stderr.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/stderr
+[travis-image]: https://img.shields.io/travis/paulcpederson/stderr.svg?style=flat-square
+[travis-url]: https://travis-ci.org/paulcpederson/stderr
