@@ -29,10 +29,12 @@ test('should correctly write to stdout', function (t) {
 
 test('should correctly write to stderr', function (t) {
   t.plan(1)
-  var bin = spawn(cli, ['ls', '-l', 'banana'])
-  bin.stderr.setEncoding('utf8')
+  var bin = spawn(cli, ['node', 'banana'])
   bin.stderr.once('data', function (data) {
-    t.equal(data.trim(), 'ls: banana: No such file or directory')
+    var normal = spawn('node', ['banana'])
+    normal.stderr.once('data', function (normalData) {
+      t.equal(normalData.toString('utf8'), data.toString('utf8'))
+    })
   })
 })
 
