@@ -1,12 +1,12 @@
 {
-  "name": "errify",
+  "name": "stderr",
   "description": "Flash an OS notification when a process writes to stderr",
   "version": "1.0.0",
   "author": "Paul C Pederson <paul.c.pederson@gmail.com>",
   "bugs": {
-    "url": "https://github.com/paulcpederson/errify/issues"
+    "url": "https://github.com/paulcpederson/stderr/issues"
   },
-  "homepage": "https://github.com/paulcpederson/errify",
+  "homepage": "https://github.com/paulcpederson/stderr",
   "keywords": [
     "alert",
     "error",
@@ -17,10 +17,10 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/paulcpederson/errify.git"
+    "url": "https://github.com/paulcpederson/stderr.git"
   },
   "bin": {
-    "errify": "bin/cli.js"
+    "stderr": "bin/cli.js"
   },
   "scripts": {
     "test": "standard && faucet"
