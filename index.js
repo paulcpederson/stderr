@@ -1,5 +1,5 @@
 var notifier = require('node-notifier')
-var spawn = require('child_process').spawn
+var spawn = require('cross-spawn')
 var util = require('util')
 
 function notify (command, args, data) {

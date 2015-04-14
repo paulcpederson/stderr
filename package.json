@@ -26,6 +26,7 @@
     "test": "standard && faucet"
   },
   "dependencies": {
+    "cross-spawn": "^0.2.9",
     "node-notifier": "^4.1.2"
   },
   "devDependencies": {
