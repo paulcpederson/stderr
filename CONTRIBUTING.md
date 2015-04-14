@@ -5,10 +5,9 @@
 ## Installation
 
 1. Fork and clone the repo
-2. `cd errify && npm intall`
-3. `npm link`
+2. `cd stderr && npm intall`
 
-This will set up everything you need to develop and test. The `npm link` gives you access to the `errify` command which is important for testing.
+This will set up everything you need to develop and test.
 
 ## Code Style
 
