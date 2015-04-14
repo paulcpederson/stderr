@@ -38,7 +38,18 @@ The cli is made to be as simple as possible. Simply prefix your command with `st
 stderr ls -la
 ```
 
-Commands and their output will be exactly like normal. The only exception being that if the process writes to `stderr` a system notification will appear letting you know something went wrong.
+## About
+
+stderr will display a notification when a process:
+
+1. Writes to stderr
+2. Throws an error
+
+All standard streams are left untouched by stderr. Standard input, output, and error streams should be exactly as they are with the non-prefixed version of the command. That means all piping, redirection, and bash craziness you'd like to get get into *should just work*.
+
+If you are on a system without notifications (like a server environment) they will simply fail silently, and your program will continue to read and write as usual, there just won't be any notifications.
+
+stderr uses the excellent [node-notifier](https://github.com/mikaelbr/node-notifier) module so be sure to read up on what platforms are supported.
 
 ## Why
 
