@@ -13,6 +13,10 @@
     "notification",
     "stderr"
   ],
+  "files": [
+    "index.js",
+    "bin"
+  ],
   "license": "ISC",
   "main": "index.js",
   "repository": {
