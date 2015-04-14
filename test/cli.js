@@ -12,7 +12,11 @@ function execute (command) {
 
 test('should display usage text if no command is passed', function (t) {
   t.plan(1)
-  t.equal(execute(cli).replace(/\r\n/g, '\n'), 'stderr: You must pass a command to stderr\n')
+  var bin = spawn(cli)
+  bin.stderr.setEncoding('utf8')
+  bin.stderr.once('data', function (data) {
+    t.equal(data.trim(), 'stderr: You must pass a command to stderr')
+  })
 })
 
 test('should correctly write to stdout', function (t) {
