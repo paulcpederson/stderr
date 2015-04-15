@@ -20,8 +20,8 @@ var stderr = function (command, args, options) {
   var child = spawn(command, args, options)
 
   child.on('error', function (err) {
-    process.stderr.write(err)
     notify(command, args, err)
+    throw err
   })
 
   child.stderr.on('data', function (data) {

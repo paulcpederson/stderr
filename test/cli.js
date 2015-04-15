@@ -1,4 +1,5 @@
-var exec = require('child_process').execSync
+var execSync = require('child_process').execSync
+var exec = require('child_process').exec
 var spawn = require('cross-spawn')
 var path = require('path')
 var format = require('util').format
@@ -7,7 +8,7 @@ var cli = path.join(__dirname, '..', 'bin', 'cli.js')
 var test = require('tape')
 
 function execute (command) {
-  return exec(command).toString('utf8')
+  return execSync(command).toString('utf8')
 }
 
 test('should display usage text if no command is passed', function (t) {
@@ -47,11 +48,9 @@ test('should correctly read from stdin', function (t) {
   t.equal(execute(normal), execute(bin))
 })
 
-// TODO: Report the original bash error, not a node error
-test('should throw errors from invalid bash commands', function (t) {
+test('should pass through errors', function (t) {
   t.plan(1)
-  var bin = spawn(cli, ['banana'])
-  bin.once('close', function (code) {
-    t.notEqual(code, 0)
+  exec(format('%s banana', cli), function (err) {
+    t.ok(err)
   })
 })
